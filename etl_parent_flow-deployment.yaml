@@ -3,23 +3,13 @@
 ###
 name: gh
 description: null
-version: 53f8a983747686c041311bcc3bf8c531
+version: f70096c86feaefe32b29116976b2168a
 # The work queue that will handle this deployment's runs
 work_queue_name: default
 tags: []
-parameters:
-  color: green
-  months:
-  - 11
-  year: 2020
+parameters: {"color": "yellow", "months": [1, 2, 3], "year": 2021}
 schedule: null
 infra_overrides: {}
-
-###
-### DO NOT EDIT BELOW THIS LINE
-###
-flow_name: etl-parent-flow
-manifest_path: null
 infrastructure:
   type: process
   env: {}
@@ -28,16 +18,19 @@ infrastructure:
   command: null
   stream_output: true
   working_dir: null
-  _block_document_id: 784c379e-e07a-4454-8980-c37c90b3058b
-  _block_document_name: anonymous-fd0c6363-c291-46e9-9227-8dae6d72db4a
-  _is_anonymous: true
   block_type_slug: process
   _block_type_slug: process
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: etl-parent-flow
+manifest_path: null
 storage:
   repository: https://github.com/Yers1n1a/DE.git
   reference: null
   access_token: null
-  _block_document_id: 2bcce413-1639-43cd-ad89-ab21672fc1bf
+  _block_document_id: 85e55906-1dfb-4876-b48b-2f3986bdee8c
   _block_document_name: prefect-gh-flow
   _is_anonymous: false
   block_type_slug: github
