@@ -6,9 +6,6 @@ from random import randint
 from prefect.tasks import task_input_hash
 from datetime import timedelta
 
-from prefect.filesystems import GCS
-
-
 
 @task(retries=3, cache_key_fn=task_input_hash, cache_expiration=timedelta(days=1))
 def fetch(dataset_url: str) -> pd.DataFrame:
@@ -44,8 +41,7 @@ def write_local(df: pd.DataFrame, color: str, dataset_file: str) -> Path:
 @task()
 def write_gcs(path: Path) -> None:
     """Upload local parquet file to GCS"""
-    # gcs_block = GcsBucket.load("bucket-block")
-    gcs_block = GCS.load("bucket-block")
+    gcs_block = GcsBucket.load("bucket-block")
     gcs_block.upload_from_path(from_path=path, to_path=path)
     return
 
