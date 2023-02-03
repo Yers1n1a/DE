@@ -1,4 +1,6 @@
-pypline.py
+/ny_taxi_postgres_data
+/.ipynb_checkpoints
+/data
+pypeline.py
 taxi_zones.csv
-.ny_taxi_postgres_data
-.ipynb_checkpoints
+yellow_tripdata_2021-01.parquet
