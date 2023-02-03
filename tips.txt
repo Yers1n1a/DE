@@ -46,15 +46,14 @@ docker run -it \
     --port=5432 \
     --db_name=ny_taxi \
     --table_name=yellow_taxi_data \
-    --url_data="https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2019-01.parquet"
+    --url_data="https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2021-01.parquet"
 
 docker run -it \
-    --network=pg-network \
     yellow_taxi_ingest:v0001\
     --user=root \
     --password=root \
-    --host=pgdatabase \
+    --host=localhost \
     --port=5432 \
     --db_name=ny_taxi \
     --table_name=yellow_taxi_data \
-    --url_data="https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2019-01.parquet"
+    --url_data="https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2021-01.parquet"
