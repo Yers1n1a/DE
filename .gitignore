@@ -4,3 +4,5 @@ pypeline.py
 taxi_zones.csv
 yellow_tripdata_2021-01.parquet
 /data
+/data_new
+/data_new_schema
