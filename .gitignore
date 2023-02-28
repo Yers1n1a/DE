@@ -6,3 +6,5 @@ yellow_tripdata_2021-01.parquet
 /data
 /data_new
 /data_new_schema
+fhvhv_tripdata_2021-06.csv.gz
+/week_5_spark/fhvhv
