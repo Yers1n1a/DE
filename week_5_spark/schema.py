@@ -1,4 +1,4 @@
-StructType(
+types.StructType(
     [
         types.StructField("dispatching_base_num", types.StringType(), True),
         types.StructField("pickup_datetime", types.TimestampType(), True),
